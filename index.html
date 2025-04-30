@@ -4,23 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pearl Dental Clinic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #86C5D8;
-      --secondary: #AFDCEB;
-      --accent: #ffffff;
-      --background: #F0F8FF;
-      --highlight: #CAE9F5;
-    }
+   :root {
+  --primary: #86C5D8;
+  --secondary: #AFDCEB;
+  --accent: #ffffff;
+  --background: #F0F8FF;
+  --highlight: #CAE9F5;
+}
 
-    * {
-      box-sizing: border-box;
-    }
 
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--background);
       color: var(--primary);
     }
@@ -31,6 +27,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -49,7 +46,7 @@
     }
 
     nav a:hover {
-      color: var(--highlight);
+      color: var(--secondary);
     }
 
     .container {
@@ -98,8 +95,8 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
       text-align: center;
-      transition: transform 0.3s ease, background-color 0.3s;
     }
 
     .card:hover {
@@ -142,21 +139,31 @@
       font-weight: 600;
     }
 
-    .submit-btn, .book-btn {
+    .submit-btn {
       background-color: var(--primary);
       color: var(--accent);
-      padding: 0.75rem 1.5rem;
+      padding: 0.75rem;
       border: none;
-      border-radius: 10px;
-      font-size: 1rem;
+      border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s;
     }
 
-    .submit-btn:hover, .book-btn:hover {
+    .submit-btn:hover {
       background-color: var(--secondary);
-      transform: scale(1.05);
+    }
+
+    .book-btn {
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      background-color: var(--secondary);
+      color: var(--accent);
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     footer {
@@ -191,31 +198,6 @@
       padding: 2rem;
       border-left: 6px solid var(--secondary);
       border-radius: 10px;
-    }
-
-    @media (max-width: 768px) {
-      .hero img {
-        max-width: 100%;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .hero {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .features {
-        flex-direction: column;
-      }
-
-      .appointment-form {
-        width: 100%;
-      }
     }
   </style>
 </head>
@@ -274,7 +256,7 @@
       <ul class="services">
         <li><img src="general.jpg" alt="General"><strong>General Dentistry</strong> – Check-ups, Cleanings, Fillings & Extractions</li>
         <li><img src="cosmetic.jpg" alt="Cosmetic"><strong>Cosmetic Dentistry</strong> – Whitening, Veneers, Smile Makeovers</li>
-        <li><img src="rest.jpg" alt="Restorative"><strong>Restorative Care</strong> – Crowns, Dentures, Implants</li>
+        <li><img src="rest.jpg"Restorative"><strong>Restorative Care</strong> – Crowns, Dentures, Implants</li>
         <li><img src="braces.jpg" alt="Aligners"><strong>Braces & Aligners</strong> – Metal, Ceramic & Clear Aligners</li>
         <li><img src="kids.jpg" alt="Kids"><strong>Kids’ Dental Care</strong> – Child Check-ups & Fluoride Treatments</li>
         <li><img src="emergency.jpg" alt="Emergency"><strong>Emergency Dental</strong> – Toothaches, Broken or Knocked-Out Teeth</li>
@@ -344,3 +326,4 @@
   </script>
 </body>
 </html>
+ 
